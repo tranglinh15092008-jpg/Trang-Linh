@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Hoạt Động Lớp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Chung Nhúng (Đã lược bỏ để tránh lặp lại, vui lòng copy toàn bộ khối <style> từ file Trang giới thiệu lớp.html và dán vào đây) */
+        /* Bắt đầu CSS */
+        :root { /* ... */ }
+        /* ... và tiếp tục toàn bộ CSS */
+    </style>
+
+    <style>
+        /* CSS Chung Nhúng */
+        :root {
+            --primary-color: #3f51b5;     
+            --secondary-color: #ff4081;   
+            --background-light: #f4f6f9;  
+            --text-dark: #2c3e50;         
+            --text-light: #ecf0f1;        
+            --font-heading: 'Poppins', sans-serif; 
+            --font-body: 'Roboto', sans-serif;     
+        }
+
+        body {
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--background-light) 0%, #e0e7ff 100%);
+            color: var(--text-dark);
+            line-height: 1.7;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* Tiêu đề */
+        h1 {
+            font-family: var(--font-heading);
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 3.2em;
+            margin: 40px 0 20px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        h3 {
+            color: var(--text-dark);
+            font-size: 1.4em;
+            margin-top: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Nội dung đóng khung (Box) */
+        .box, .member-card {
+            background-color: white;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover, .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hình ảnh và Video */
+        box { background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            border-radius: 12px;}
+        img,video { width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;}
+
+        /* Nút Điều hướng (Navigation Buttons) */
+        .navigation {
+            text-align: center;
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .btn-left, .btn-right {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+        }
+
+        .btn-left {
+            background: linear-gradient(45deg, var(--primary-color), #64b5f6);
+            color: var(--text-light);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-right {
+            background: linear-gradient(45deg, var(--secondary-color), #ff8a80);
+            color: var(--text-light);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-left:hover, .btn-right:hover {
+            transform: scale(1.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Layout Card Thành Viên (Chỉ dùng cho Trang thành viên) */
+        .member-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px 0;
+        }
+
+        .member-card {
+            width: 280px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .member-card img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 5px solid var(--primary-color);
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .member-card h2.name {
+            color: var(--primary-color);
+            margin: 5px 0;
+            font-size: 1.5em;
+        }
+
+        .member-card h3.role {
+            color: #444;
+            font-weight: 400;
+            font-size: 1em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HOẠT ĐỘNG LỚP 12A1</h1>
+
+    <div class="box">
+        <h2>HOẠT ĐỘNG 20/10 – NGÀY PHỤ NỮ VIỆT NAM</h2>
+        <p>Ngày 20/10 các bạn nam lớp 12A1 đã trao những món quà yêu thương đến cô giáo và các bạn nữ trong lớp,món quà nhỏ nhưng chứa đầy những ý nghĩa sâu sắc với tinh thần tôn vinh và gắn kết giữa các thành viên trong tập thể.</p>
+        <div style="text-align: center;">
+            <img src="20 tháng 10 hình1.jpg" alt="Ảnh 20/10 #1">
+            <img src="20 tháng 10 hình 2.jpg" alt="Ảnh 20/10 #2">
+            <img src="20 tháng 10 hình 3.jpg" alt="Ảnh 20/10 #3">
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>HOẠT ĐỘNG 20/11 – TRI ÂN THẦY CÔ</h2>
+        <p>Ngày 20/11, các bạn lớp 12A1 đã cùng nhau góp sức chuẩn bị những món quà nhỏ ý nghĩa để tri ân thầy cô giáo.</p>
+        <div style="text-align: center;">
+            <img src="20 tháng 11.jpg" alt="Ảnh 20/11">
+            <video src="20 tháng 11.mp4" controls></video>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>HOẠT ĐỘNG HKPĐ – VÒNG TRƯỜNG</h2>
+        <p>Vào mùa HKPĐ trong trường, học sinh lớp 12A1 đã thể hiện mình với tinh thần đoàn kết, vui tươi và quyết tâm.</p>
+        <div style="text-align: center;">
+            <img src="HKPĐ 1.jpg" alt="Hoạt động HKPĐ #1">
+            <img src="HKPĐ 2.jpg" alt="Hoạt động HKPĐ #2">
+            <img src="HKPĐ.jpg" alt="Hoạt động HKPĐ #3">
+        </div>
+    </div>
+
+    <div class="navigation">
+        <a href="Trang thành viên lớp 1.html" class="btn-left">Trang Thành Viên</a>
+        <a href="Trang giới thiệu lớp học 1.html" class="btn-right">Trang Giới Thiệu</a>
+    </div>
+
+</body>
+</html>
