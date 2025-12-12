@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu Lớp 12A1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Chung Nhúng */
+        :root {
+            --primary-color: #3f51b5;     
+            --secondary-color: #ff4081;   
+            --background-light: #f4f6f9;  
+            --text-dark: #2c3e50;         
+            --text-light: #ecf0f1;        
+            --font-heading: 'Poppins', sans-serif; 
+            --font-body: 'Roboto', sans-serif;     
+        }
+
+        body {
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--background-light) 0%, #e0e7ff 100%);
+            color: var(--text-dark);
+            line-height: 1.7;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* Tiêu đề */
+        h1 {
+            font-family: var(--font-heading);
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 3.2em;
+            margin: 40px 0 20px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        h3 {
+            color: var(--text-dark);
+            font-size: 1.4em;
+            margin-top: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Nội dung đóng khung (Box) */
+        .box, .member-card {
+            background-color: white;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover, .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hình ảnh và Video */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            display: block;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            display: block;
+        }
+
+        .box img {
+            margin: 10px auto;
+            max-width: 80%;
+            height: auto; /* Thay đổi height từ cố định thành auto */
+            object-fit: cover;
+        }
+
+        /* Nút Điều hướng (Navigation Buttons) */
+        .navigation {
+            text-align: center;
+            margin-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .btn-left, .btn-right {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+        }
+
+        .btn-left {
+            background: linear-gradient(45deg, var(--primary-color), #64b5f6);
+            color: var(--text-light);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-right {
+            background: linear-gradient(45deg, var(--secondary-color), #ff8a80);
+            color: var(--text-light);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-left:hover, .btn-right:hover {
+            transform: scale(1.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Layout Card Thành Viên (Chỉ dùng cho Trang thành viên) */
+        .member-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px 0;
+        }
+
+        .member-card {
+            width: 280px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .member-card img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 5px solid var(--primary-color);
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .member-card h2.name {
+            color: var(--primary-color);
+            margin: 5px 0;
+            font-size: 1.5em;
+        }
+
+        .member-card h3.role {
+            color: #444;
+            font-weight: 400;
+            font-size: 1em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>GIỚI THIỆU LỚP 12A1</h1>
+    <h2>ĐOÀN KẾT - TỰ TIN - TỎA SÁNG</h2>
+
+    <div class="box" style="text-align: center;">
+        <img src="ảnh lớp.jpg" alt="Ảnh lớp 12A1">
+        <p>Lớp 12A1 là tập thể đoàn kết, năng động, luôn tích cực tham gia các hoạt động và đạt thành tích cao trong học tập. Phương châm của chúng tôi là **"Đoàn Kết - Tự Tin - Tỏa Sáng"**!</p>
+    </div>
+
+    <div class="navigation">
+        <a href="Trang hoạt động lớp 1.html" class="btn-left">Trang Thành Viên</a>
+        <a href="Trang thành viên lớp 1.html" class="btn-right">Trang Hoạt Động Lớp</a>
+    </div>
+
+</body>
+</html>
